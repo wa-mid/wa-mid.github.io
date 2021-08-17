@@ -5,37 +5,37 @@ $(document).ready(function() {
     /*-----------------------------------------------------------------
       Protect Website
     -------------------------------------------------------------------*/
-    // $( window ).on( "load", function() {
-    //   document.onkeydown = function(e) {
-    //     if(e.keyCode == 123) {
-    //     return false;
-    //     }
-    //     if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-    //     return false;
-    //     }
-    //     if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-    //     return false;
-    //     }
-    //     if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-    //     return false;
-    //     }
+    $( window ).on( "load", function() {
+      document.onkeydown = function(e) {
+        if(e.keyCode == 123) {
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+        return false;
+        }
       
-    //     if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
-    //     return false;
-    //     }      
-    //   };
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+        return false;
+        }      
+      };
       
-    //   $("html").on("contextmenu",function(){
-    //     return false;
-    //   });
-    // });
+      $("html").on("contextmenu",function(){
+        return false;
+      });
+    });
 
-    // $(document).ready(function () {
-    //   //Disable cut copy paste
-    //   $('body').bind('cut copy paste', function (e) {
-    //     e.preventDefault();
-    //   });
-    // });
+    $(document).ready(function () {
+      //Disable cut copy paste
+      $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+      });
+    });
 
 
     /*-----------------------------------------------------------------
@@ -689,7 +689,7 @@ $(document).ready(function() {
               var thumbnail = items[index].el.getElementsByTagName("img")[0], // find thumbnail
                   pageYScroll =
                   window.pageYOffset || document.documentElement.scrollTop,
-                  rect = thumbnail.getBoundingGroupRect();
+                  rect = thumbnail.getBoundingClientRect();
       
               return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
             }
