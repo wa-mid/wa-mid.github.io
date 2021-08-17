@@ -12,7 +12,7 @@
  - Navbar
  - Popup
  - Cases
- - Clients
+ - Groups
  - Contact
  - Portfolio
  - News
@@ -1751,18 +1751,18 @@ button:focus {
 }
 
 /* -----------------------------------------------------------------
-    - Clients
+    - Groups
 ----------------------------------------------------------------- */
-.js-carousel-clients {
+.js-carousel-groups {
   padding-top: 0.5rem;
   padding-bottom: 1rem;
 }
 
-.js-carousel-clients .swiper-slide {
+.js-carousel-groups .swiper-slide {
   text-align: center;
 }
 
-.js-carousel-clients .logo-client {
+.js-carousel-groups .logo-group {
   max-width: 80%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
@@ -1770,7 +1770,7 @@ button:focus {
   transition: all .5s ease-in-out;
 }
 
-.js-carousel-clients .logo-client:hover {
+.js-carousel-groups .logo-group:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
