@@ -1,17 +1,47 @@
-/*
- * Author: ArtStyles (ArtTemplate)
- * Template Name: vCard 4
- * Version: 1.0.0
-*/
-
 $(document).ready(function() {
 
     'use strict';
 
     /*-----------------------------------------------------------------
+      Protect Website
+    -------------------------------------------------------------------*/
+    $( window ).on( "load", function() {
+      document.onkeydown = function(e) {
+        if(e.keyCode == 123) {
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+        return false;
+        }
+      
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+        return false;
+        }      
+      };
+      
+      $("html").on("contextmenu",function(){
+        return false;
+      });
+    });
+
+    $(document).ready(function () {
+      //Disable cut copy paste
+      $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+      });
+    });
+
+
+    /*-----------------------------------------------------------------
       Detect device mobile
     -------------------------------------------------------------------*/
-	
+
     var isMobile = false; 
     if( /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         $('html').addClass('touch');
@@ -37,9 +67,9 @@ $(document).ready(function() {
       Carousel
     -------------------------------------------------------------------*/	
     
-	  // Testimonials
+	  // Teammates
 	  $('.js-carousel-review').each(function() {
-		    var testimonialsCarousel = new Swiper('.js-carousel-review', {
+		    var teammatesCarousel = new Swiper('.js-carousel-review', {
             slidesPerView: 2,
 			      spaceBetween: 30,
 			      speed: 300,
